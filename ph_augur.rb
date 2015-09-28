@@ -9,7 +9,7 @@ require 'json'
 
 phCSV = CSV.foreach('allIDs-twitter.csv') do |row|
 	id = row[0]
-	uri = URI.parse("http://api.augur.io/v2/user?key=ikxxvks77804a1n8a37dn0pt088q00qf&twitter_handle=#{id}")
+	uri = URI.parse("http://api.augur.io/v2/user?key=xxx&twitter_handle=#{id}")
 	Net::HTTP.start(uri.host, uri.port, use_ssl: false) do |http|
   	request = Net::HTTP::Get.new uri
   	response = http.request request
